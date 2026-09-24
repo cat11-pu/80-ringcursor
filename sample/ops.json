@@ -1,0 +1,17 @@
+{
+  "capacity": 4,
+  "cursor_invariant": true,
+  "ops": [
+    {"op": "append", "payload": "r1"},
+    {"op": "open", "name": "c1"},
+    {"op": "append", "payload": "r2"},
+    {"op": "append", "payload": "r3"},
+    {"op": "read", "name": "c1", "count": 2},
+    {"op": "open", "name": "c2"},
+    {"op": "append", "payload": "r4"},
+    {"op": "append", "payload": "r5"},
+    {"op": "append", "payload": "r6"},
+    {"op": "read", "name": "c1", "count": 1},
+    {"op": "read", "name": "c2", "count": 2}
+  ]
+}
