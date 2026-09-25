@@ -1,6 +1,6 @@
 {
   "capacity": 4,
-  "cursor_invariant": true,
+  "cursor_invariant": false,
   "ops": [
     {"op": "append", "payload": "r1"},
     {"op": "open", "name": "c1"},
