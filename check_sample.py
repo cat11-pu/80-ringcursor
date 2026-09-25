@@ -29,7 +29,8 @@ def main() -> int:
     print("缓冲容量 =", spec["capacity"])
     print("恢复后的条数 =", restored.get("size"))
     print("恢复后的覆盖计数 =", restored.get("overwritten"))
-    print("不变量（读到的都是未覆盖记录） =", spec["cursor_invariant"])
+    invariant = all(result.get("valid") for _, result in reads)
+    print("不变量（读到的都是未覆盖记录） =", invariant)
     print("读完的记录数 =", sum(len(result.get("records") or []) for _, result in reads))
     return 0
 
